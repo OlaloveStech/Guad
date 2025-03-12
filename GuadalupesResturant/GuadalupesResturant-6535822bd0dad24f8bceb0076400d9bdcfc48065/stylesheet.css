@@ -1,0 +1,233 @@
+/* Import fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Varibales and Universal declarations */
+:root {
+    --main:#ff9e56;
+   --green:#2a9d6e;
+   --red:#e63c49;
+   --yellow:#ffd26b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: poppins;
+
+}
+
+/* Navigation bar */
+
+nav {
+    background:var(--main);
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.hamburger i {
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        animation: slide-down 0.3s ease-out;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-item {
+        padding: 15px;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-item {
+    padding: 30px;
+    justify-content: space-evenly;
+    transition: background 0.2s, color 0.3s, background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-image: url(Images/tab\ selector.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: slide-in 0.3s forwards; 
+    background-position: center;
+    background-color: var(--main);
+}
+
+.nav-link:hover {
+    color: var(--yellow);
+}
+
+.nav-item:after {
+    background-image: url(Images/tab\ selector.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;  
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    /* background-image: url(Images/hero\ image.jpg) ; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.hero-text {
+    padding-bottom:50px ;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+   position: relative;
+   background-image: url(Images/hero\ image.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 150px;
+
+}
+
+.welcome { 
+    font-family: lobster two;
+    margin: auto;
+    font-size: 4rem;
+    text-shadow: #0000;
+    text-align: center;
+    animation: slide-up 1s ease-out;
+}
+
+.hero-text {
+    padding: 20px;
+    
+}
+
+.btn {
+    background-color: var(--green);
+    padding: 20px 30px;
+    margin: 50px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.btn:hover {
+    background-color: var(--yellow);
+    color: var(--red);
+}
+
+/* highlights */
+.highlights {
+    height: 100vh;
+    background-image: url(Images/back\ new.png);
+    background-size: fit ;
+ }
+
+ /* Reviews */
+    .reviews {
+        height: 100vh;
+        background-image: url(Images/back\ red.png)
+    }
+
+/* gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));    gap: 10px;
+    background-image: url(Images/back\ green.png);
+    height: 100vh;
+}
+
+.gallery-grid .pic {
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--red);
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* animations */
+
+@keyframes slide-up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: var(--main);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background-color: var(--green);
+}
