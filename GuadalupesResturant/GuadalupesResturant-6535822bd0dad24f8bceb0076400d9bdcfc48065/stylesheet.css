@@ -34,6 +34,9 @@
 
 body {
   font-family: poppins;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .scale-up-ver-center {
@@ -77,6 +80,7 @@ body {
   align-items: center;
   padding: 15px 60px;
   position: fixed;
+  left: 0;
   top: 0;
   width: 100%;
   backdrop-filter: blur(20px);
@@ -110,34 +114,42 @@ body {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item {
+    padding: 20px;
+    justify-content: space-evenly;
+    transition: background 0.2s, color 0.3s, background-color 0.3s;
 }
 
 .nav-item .nav-link {
-  text-decoration: none;
-  color: #f8f8f8;
-  font-size: 14px;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease;
-  text-transform: capitalize;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-.nav-item .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -5px;
-  width: 0%;
-  height: 3px;
-  background: linear-gradient(90deg, #ff8c00, #ff3d00);
-  border-radius: 10px;
-  transform: translateX(-50%);
-  transition: width 0.3s ease-in-out;
+.nav-item:hover {
+    background-image: url(Images/tab\ selector.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: slide-in 0.3s forwards;
+    background-position: center;
+    -webkit-animation: slide-in 0.3s forwards;
 }
 
-.nav-item .nav-link:hover::after {
-  width: 100%;
+.nav-link:hover {
+    color: var(--yellow);
+}
+
+.nav-item:after {
+    background-image: url(Images/tab\ selector.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;  
 }
 
 .nav-button {
@@ -193,6 +205,7 @@ body {
   text-align: center;
   overflow: hidden;
   background-attachment: fixed;
+  width: 100%;
 }
 
 .hero::before {
@@ -214,7 +227,9 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-family: lobster two;
+
+  font-size: clamp(1.7rem, 8vw, 4rem);
   color: var(--primary-color);
   font-weight: bold;
   margin-bottom: 20px;
@@ -240,6 +255,8 @@ body {
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: var(--text-light);
+  /* font-family: Oswald; */
+  font-family: Poppins, sans-serif;
 }
 
 .order-online {
@@ -381,10 +398,10 @@ body {
 
 #about-us {
   min-height: 100vh;
-  margin-top: -100px;
+  margin-top: 100px;
   z-index: 10;
   position: relative;
-  margin: -100px 10px 0;
+  margin: 100px 10px 100px;
 }
 
 /* .about-us_container {
@@ -512,7 +529,7 @@ body {
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 2px;
 }
 
@@ -580,12 +597,135 @@ body {
     font-size: 13px;
   }
 }
+
+
+/* ! opening hours  */
+
+.opening-hours {
+    margin-top: -100px;
+    min-height: 150vh;
+    background-image: url("./Images/back\ red.png");
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+    width: clamp(300px, 90vw, 1300px);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+  
+  .opening-hours .section-title {
+    font-size: clamp(25px , 3.5vw, 50px);
+    font-weight: bold;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: lobster two;
+  }
+  
+  .hours-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .hours-wrapper-title {
+    flex-basis: 100%;
+
+  }
+  
+  .hour-card {
+    padding: 20px;
+    width: clamp(300px, 60vw, 700px);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    flex-basis: 40%;
+    box-shadow: var(--shadow);
+    background-image: url("./Images/back\ green.png");
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    -webkit-transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   
+}
+
+
+  
+  
+
+  
+  .hour-card h3 {
+    font-size: clamp(17px, 3vw, 30px);
+    color: var(--yellow);
+  }
+  
+  .hour-card p {
+    font-size: clamp(15px, 2.6vw, 20px);
+    font-weight: bold;
+    color: var(--text-light);
+    text-align: left;
+    line-height: 2.5;
+  }
+  
+  .highlight {
+    
+    flex-basis: 100%;
+  }
+  .highlight h3 {
+    font-size: clamp(18px, 4vw, 40px);
+  }
+  
+  .cta {
+    margin-top: 40px;
+  }
+  
+  .cta p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+  }
+  
+  .reserve-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--main);
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  .reserve-btn:hover {
+    background: var(--red);
+    transform: scale(1.1);
+  }
+  
+
+
+
+
+
 /* ! menus */
 
 .menu-section {
   text-align: center;
   padding: 80px 20px;
-  background: #f8f8f8;
+  background: url("./Images/back\ green.png");
+  width: 100%;
+  margin-top: 100px;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.263);
 }
 .menu-header h2 {
   font-size: 2.5rem;
@@ -639,6 +779,19 @@ body {
   .menu-grid {
     grid-template-columns: 1fr;
   }
+
+  .opening-hours .hour-card {
+    flex-basis: 100%;
+    align-items: center;
+
+  }
+}
+
+.learn-more-btn {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 /*!Reviews */
@@ -693,6 +846,7 @@ body {
   position: relative;
   display: inline-block;
   color: var(--main);
+  text-transform: capitalize;
 }
 
 .section-title::after {
@@ -706,6 +860,11 @@ body {
 }
 
 /* Testimonial Container */
+#testmonial {
+  width: 100%;
+
+}
+
 .testmonial-container {
   display: flex;
   flex-wrap: wrap;
@@ -825,6 +984,7 @@ body {
   gap: 10px;
   padding: 20px;
   background-color: #222;
+  background-image: url("./Images/back\ yellow.png");
 }
 
 .gallery-grid-header-container {
@@ -836,8 +996,9 @@ body {
 
 .gallery-grid h2 {
   text-align: center;
-  color: white;
+  color: var(--bg-dark);
   margin-bottom: 30px;
+  text-transform: capitalize ;
 }
 
 /* Dynamic image sizes for larger screens */
@@ -997,6 +1158,7 @@ body {
   color: var(--text-light);
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Floating animation effect */
@@ -1110,7 +1272,6 @@ body {
   transform: translateY(-5px);
 }
 
-
 @-webkit-keyframes scale-up-ver-center {
   0% {
     -webkit-transform: scaleY(0.4);
@@ -1131,7 +1292,6 @@ body {
     transform: scaleY(1);
   }
 }
-
 
 @-webkit-keyframes kenburns-bottom-right {
   0% {
