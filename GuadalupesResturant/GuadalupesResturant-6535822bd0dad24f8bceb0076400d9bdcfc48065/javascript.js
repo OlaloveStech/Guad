@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > heroSection.clientHeight - 100) {
+        if (window.scrollY > heroSection.clientHeight - 300) {
             navbar.classList.add("fixed");
         } else {
             navbar.classList.remove("fixed");
