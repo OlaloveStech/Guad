@@ -1,140 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guadalupe's Tex-Mex Restaurant</title>
-    <link rel="shortcut icon" href="Images/Logo copy.ico" type="image/x-icon">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+    <link rel="shortcut icon" href="Images/Logo copy.ico" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-<body>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
 
+  <body>
     <!-- navigation bar -->
 
     <header>
-        <nav class="navbar">
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <img
+            src="Images/Logo copy.png"
+            alt="Logo"
+            height="60px"
+            width="60px"
+            class="nav-logo"
+            style="padding: 15px; margin-right: 30px"
+          />
+        </a>
 
-            <a href="#">
-                <img src="Images/Logo copy.png" alt="Logo" height="60px" width="60px" class="nav-logo" style="padding: 15px;margin-right: 30px;">
-            </a class="nav-logo">
+        <div class="hamburger">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </div>
 
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+        <div class="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#menu" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testmonial" class="nav-link">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-us" class="nav-link">About us</a>
+            </li>
+            <div class="cancel-hamburger">
+              <i class="fa-solid fa-xmark"></i>
             </div>
-
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Reviews</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact us</a>
-                </li>
-            </ul>
-
-            
-            
-        </nav>
+          </ul>
+        </div>
+        <button class="btn nav-button">
+          <a href="#" class="nav-link">Order Now</a>
+        </button>
+      </nav>
     </header>
 
     <!-- hero -->
 
-    <section class="hero">
-        
-       <div class="hero-img" >
-         <div class="hero-content">
-            <h1 class="welcome">Welcome to Guadalupe's Mexican Restaurant</h1>
-            <p class="hero-text">Your go-to spot for authentic Tex-Mex flavors!</p>
-            <a href="#" class="btn">Book a Table</a>
-            <a href="#" class="btn">Order Online</a>
-         </div>
-       </div>
-     </section>
-
-  <!-- Highlights -->
-
-   <section class="highlights">
-
-        <div class="highlight-item">
-            <h2>Our Menu</h2>
-            <p>Explore our delicious Tex-Mex dishes</p>
-            <button><a href="#">View Menu</a></button>
-    
+    <section class="hero animate__animated animate__fadeIn">
+      <div class="hero-img">
+        <div class="hero-content">
+          <h1 class="welcome animate__animated animate__rollIn">
+            Welcome to Guadalupe's Mexican Restaurant
+          </h1>
+          <p class="hero-text">
+            Your go-to spot for authentic Tex-Mex flavors!
+          </p>
+          <a href="#" class="btn">Book a Table</a>
+          <a href="#" class="btn order-online">Order Online</a>
         </div>
+      </div>
+    </section>
 
+    <!-- About us -->
+    <section
+      id="about-us"
+      class="section_padding animate__animated animate__slideInUp"
+    >
+      <div class="about-us_container">
+        <div class="about-us_container_img">
+          <img src="./Images/about us image.jpg" alt="" />
+        </div>
+        <div class="about-us_container_writeup">
+          <h4 class="section_header">About us</h4>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Voluptatibus recusandae nemo repellendus doloremque assumenda natus
+            blanditiis ad sunt incidunt hic, sapiente eligendi omnis praesentium
+            molestias doloribus facilis odit delectus officia, dolores velit
+            culpa iure maxime voluptas. Repellat ad quam cum rerum consequatur.
+            Expedita vel maxime tenetur ducimus numquam repellendus impedit?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu section -->
+    <section class="menu-section" id="menu" data-aos="fade-up" data-aos-duration = "3000">
+      <div class="menu-header">
+        <h2>Our Menu</h2>
+        <p>Explore our delicious offerings</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="images/tacos.jpg" alt="Tacos" />
+          <div class="menu-info">
+            <h3>Spicy Tacos</h3>
+            <p>Freshly made with the best ingredients.</p>
+            <span>$10.99</span>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="images/burrito.jpg" alt="Burrito" />
+          <div class="menu-info">
+            <h3>Cheesy Burrito</h3>
+            <p>A perfect blend of cheese and meat.</p>
+            <span>$12.49</span>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="images/enchiladas.jpg" alt="Enchiladas" />
+          <div class="menu-info">
+            <h3>Chicken Enchiladas</h3>
+            <p>Deliciously rich and flavorful.</p>
+            <span>$13.99</span>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="images/margarita.jpg" alt="Margarita" />
+          <div class="menu-info">
+            <h3>Classic Margarita</h3>
+            <p>A refreshing drink to complete your meal.</p>
+            <span>$8.99</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Reviews -->
 
-     <section class="reviews">
-        <div class="review-item">
-            <img src="Images/5 star.png" alt="" width="200px" height="100px">
-
-            <h2>Reviews</h2>
-            <p>Read what our customers have to say about us</p>
-            <button><a href="#">View Reviews</a></button>
-    
-        </div>
-
-     </section>
-
-     <!-- gallery -->
-      <section class="gallery">
-          <div class="gallery-grid">
-            <h2>Gallery</h2>
-              <div class="gallery-grid-item">
-                <img src="Images/Fried icecream.jpg" alt="Ice-cream" class="pic">
+    <!-- REVIEWS Section -->
+    <section id="testmonial">
+      <h2 class="section-title">REVIEWS</h2>
+      <div class="testmonial-container">
+        <div class="testmonial-card">
+            <h3 class="testmonial-title">John Doe</h3>
+            <h6 class="testmonial-subtitle">Chef de Cuisine</h6>
+            <div class="testmonial-body">
+              <p>
+                "An absolute delight! The flavors were a perfect balance of savory and sweet, and the plating was pure artistry. A five-star dining experience!"
+              </p>
             </div>
-            <div class="gallery-grid-item">
-                <img src="Images/Guadalupe Taco Salad.jpg" alt="Guadalupe Taco Salad" class="pic">
-            </div>
-            <div class="gallery-grid-item">
-                <img src="Images/Fajitas.jpg" alt="Fajitas" class="pic">
-            </div>
-            <div class="gallery-grid-item">
-                <img src="Images/El cancun.jpg" alt="El cancun" class="pic">
-            </div>
+          </div>
           
-            <div class="gallery-grid-item">
-                <img src="Images/Lunch Custom combo.jpg" alt="Lunch combo" class="pic">
+          <div class="testmonial-card">
+            <h3 class="testmonial-title">Steve Thomas</h3>
+            <h6 class="testmonial-subtitle">Food Critic</h6>
+            <div class="testmonial-body">
+              <p>
+                "From the first bite to the last, every dish was a masterpiece. The attention to detail in both taste and presentation was simply outstanding!"
+              </p>
             </div>
-            <div class="gallery-grid-item">
-                <img src="Images/Quesadaillas.jpg" alt="Quesadaillas" class="pic">
+          </div>
+          
+          <div class="testmonial-card">
+            <h3 class="testmonial-title">Miranda Joy</h3>
+            <h6 class="testmonial-subtitle">Pastry Chef</h6>
+            <div class="testmonial-body">
+              <p>
+                "The desserts were heavenly! Each bite melted in my mouth, leaving behind a symphony of flavors. I’ll definitely be coming back for more!"
+              </p>
             </div>
-            <div class="gallery-grid-item">
-                <img src="Images/Nachos.jpg" alt="Nachos" class="pic">
+          </div>
+          
+      </div>
+    </section>
+
+    <!-- gallery -->
+    <section class="gallery">
+      <div class="gallery-grid" >
+            <div class="gallery-grid-header-container">        <h2 class="section_header">Gallery</h2>
             </div>
-            <div class="gallery-grid-item">
-                <img src="Images/Torta.jpg" alt="Tortas" class="pic">
+        <div class="gallery-grid-item">
+          <img 
+            data-aos="zoom-in"
+          data-aos-duration="000"
+          src="Images/Fried icecream.jpg" alt="Ice-cream" class="pic" />
+        </div>
+        <div class="gallery-grid-item">
+          <img 
+  data-aos="zoom-in"
+          data-aos-duration="1200"
+
+            src="Images/Guadalupe Taco Salad.jpg"
+            alt="Guadalupe Taco Salad"
+            class="pic"
+          />
+        </div>
+        <div class="gallery-grid-item">
+          <img 
+            data-aos="zoom-in"
+          data-aos-duration="1500"
+          src="Images/Fajitas.jpg" alt="Fajitas" class="pic" />
+        </div>
+        <div class="gallery-grid-item">
+          <img 
+            data-aos="zoom-in"
+          data-aos-duration="1000"
+          src="Images/El cancun.jpg" alt="El cancun" class="pic" />
+        </div>
+
+        <div class="gallery-grid-item">
+          <img 
+  data-aos="zoom-in"
+          data-aos-duration="1000"
+
+            src="Images/Lunch Custom combo.jpg"
+            alt="Lunch combo"
+            class="pic"
+          />
+        </div>
+        <div class="gallery-grid-item">
+          <img 
+            data-aos="zoom-in"
+          data-aos-duration="3000"
+          src="Images/Quesadaillas.jpg" alt="Quesadaillas" class="pic" />
+        </div>
+        <div class="gallery-grid-item">
+          <img 
+            data-aos="zoom-in"
+          data-aos-duration="2500"
+          src="Images/Nachos.jpg" alt="Nachos" class="pic" />
+        </div>
+        <div class="gallery-grid-item">
+          <img 
+            data-aos="zoom-in"
+          data-aos-duration="3000"
+          src="Images/Torta.jpg" alt="Tortas" class="pic" />
+        </div>
+        <div class="gallery-grid-item">
+          <img 
+            data-aos="zoom-in"
+          data-aos-duration="2500"
+          src="Images/Taquitos.jpg" alt="Taquitos" class="pic" />
+        </div>
+        <div class="gallery-grid-item">
+          <img 
+            data-aos="zoom-in"
+          data-aos-duration="2000"
+          src="Images/New mexico Puerco.jpg" alt="Puerco" class="pic" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Button -->
+
+    <section class="contact-section" id ="contact">
+        <div class="contact-content">
+            <h2 class="contact-title">Why Wait?</h2>
+            <p class="contact-text">Want delicacies of any kind?</p>
+            
+            <div class="contact-buttons">
+                <a href="#" class="btn call-btn">Call Now</a>
+                <a href="#" class="btn message-btn">Send a Message</a>
             </div>
-            <div class="gallery-grid-item">
-                <img src="Images/Taquitos.jpg" alt="Taquitos" class="pic">
-            </div>
-            <div class="gallery-grid-item">
-                <img src="Images/New mexico Puerco.jpg" alt="Puerco" class="pic">
+    
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-      </section>
-
-      <!-- About us -->
-
-      <!--  -->
+    </section>
     
+
+
+
+    <!--  -->
+
     <!-- Back to Top Button -->
     <button id="back-to-top" title="Back to Top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="javascript.js"></script>
-</body>
+  </body>
 </html>
