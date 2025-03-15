@@ -260,7 +260,7 @@ body {
 }
 
 .order-online {
-  background: var(--red);
+  background: var(--main);
 }
 
 .btn:hover {
@@ -636,8 +636,7 @@ body {
   .hour-card {
     padding: 20px;
     width: clamp(300px, 60vw, 700px);
-    border-top-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-radius: 40px;
     flex-basis: 40%;
     box-shadow: var(--shadow);
     background-image: url("./Images/back\ green.png");
@@ -784,9 +783,10 @@ body {
 
 .learn-more-btn {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     cursor: pointer;
     margin-top: 20px;
+  
 }
 
 /*!Reviews */
